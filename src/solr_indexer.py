@@ -31,7 +31,8 @@ def index_to_solr(solr_doc):    #method to index documnets into solr
 
 def query_solr(): # method to define solr query 
     
-    q = "id:965697965854744576" #given query to find id 
+    #q = "id:965697965854744576" #given query to find id
+    q = '*:*'
     results = solr_endpoint.search(q) # finding results at solr end point 
     
     for result in results: # given result for every id 
@@ -43,4 +44,4 @@ if __name__ == '__main__':
     
     
     
-    query_solr
+    query_solr()
