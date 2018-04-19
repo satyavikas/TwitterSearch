@@ -40,7 +40,12 @@ def extractor(worker_id):
         count += 1
         try:
             transformed_tweet = transform_tweet(tweet)
-            index_to_solr(transformed_tweet)
+            try:
+                index_to_solr(transformed_tweet)
+            except Exception as e:
+                print(e)
+                logger.error("Exeption: {0} | Error Count so far: {2}   |   Tweet: {1}".format(e, json.dumps(tweet), error_count))
+                pass
         except Exception as e:
             error_count += 1
             print(e)
