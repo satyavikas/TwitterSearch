@@ -1,10 +1,6 @@
-
 import sys
 import time
-
 from pysolr import Solr
-
-
 
 solr_endpoint = Solr('http://67.205.157.42:8983/solr/Twitter') #path of solar location
 list_solr_docs = [] # empty list to stor documents in solr
@@ -31,7 +27,7 @@ def index_to_solr(solr_doc):    #method to index documnets into solr
 
 def query_solr(): # method to define solr query 
     
-    #q = "id:965697965854744576" #given query to find id
+    # q = "id:965697965854744576" #given query to find id
     q = '*:*'
     results = solr_endpoint.search(q) # finding results at solr end point 
     
