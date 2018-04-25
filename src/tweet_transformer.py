@@ -21,7 +21,7 @@ def transform_tweet(tweet_jsonObject): #method to cover your jsonobject tweet in
     transformed_tweet['latlong'] = get_coordinates(tweet_jsonObject['coordinates'])
     
     # Sentimental Analysis
-    '''
+
     tweet_text = tweet_jsonObject['text']    
     nouns = list ( TextBlob(tweet_text).noun_phrases ) 
     polarity = TextBlob(tweet_text).sentiment.polarity 
@@ -29,13 +29,13 @@ def transform_tweet(tweet_jsonObject): #method to cover your jsonobject tweet in
     transformed_tweet['nouns'] = nouns 
     transformed_tweet['polarity'] = float("{0:.2f}".format(polarity))#finding the sentimental analysis of emotions from given scale
     transformed_tweet['subjectivity'] = float("{0:.2f}".format(subjectivity)) # finding subjectivity of the text whether its a  opinion or fact
-    '''
 
+    '''
     # Testing Ingestion without Sentimental Analysis
     transformed_tweet['nouns'] = tweet_jsonObject['entities']['hashtags'] if tweet_jsonObject['entities']['hashtags'] is not None else ['None']
     transformed_tweet['polarity'] = float("{0:.2f}".format(random.uniform(-1.0, 1.0)))
     transformed_tweet['subjectivity'] = float("{0:.2f}".format(random.uniform(-1.0, 1.0)))
-
+    '''
 
     # TODO: Remind to do ReactionRNN Sentimental analysis later. 
     
