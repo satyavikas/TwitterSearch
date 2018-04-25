@@ -55,9 +55,9 @@ def get_coordinates(twitter_coordinates): # method to get (lat long ) geospatial
         lat = str(twitter_coordinates['coordinates'][0]) #to fetch the lat value from coordinates
         long = str(twitter_coordinates['coordinates'][1])#to fetch the long value from coordinates
         
-        return lat + ',' + long # joining or concatinating both  lat and long
+        return lat + ' ' + long # joining or concatinating both  lat and long
     else:
-        return '0.00,0.00' #result in solr coordinate format
+        return '0.00 0.00' #result in solr coordinate format
     
         
     
