@@ -64,10 +64,6 @@ def get_coordinates(twitter_coordinates): # method to get (lat long ) geospatial
     else:
         return '0.00 0.00' #result in solr coordinate format
     
-        
-    
-    
-    
     pass
 
 if __name__ == '__main__':

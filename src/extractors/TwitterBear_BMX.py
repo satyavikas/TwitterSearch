@@ -33,7 +33,7 @@ def extractor(worker_id):
 
     api = twitter.Api(consumer_key, consumer_secret, access_token, access_token_secret)
 
-    results = api.GetStreamFilter(track=["Donald Trump", "India","F-1", "H1B", "H1-B", "Immigration"])
+    results = api.GetStreamFilter(track=["Donald Trump", "India", "F-1", "H1B", "H1-B", "Immigration", "OPT", "Green Card", "USCIS"])
 
     count = 0
     error_count = 0
