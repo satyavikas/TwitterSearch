@@ -5,3 +5,4 @@ This is a research project aimed at ingesting tweets from Twitter and indexing t
 NLP
 Sentimental Analysis!
 Kafka
+CouchDb
